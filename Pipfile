@@ -7,6 +7,12 @@ verify_ssl = true
 
 [packages]
 streamlit = "*"
+spacy = "*"
+textblob = "*"
+gensim = "*"
+sklearn = "*"
+numpy = "*"
+matplotlib = "*"
 
 [requires]
 python_version = "3.8"
