@@ -6,7 +6,8 @@
 ### requirements.txt
 
 ```sh
-pip freeze > requirements.txt
+pipenv install streamlit
+pipenv run pip freeze > requirements.txt
 ```
 
 ### setup.sh
