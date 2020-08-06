@@ -4,7 +4,20 @@
 ## Local Run
 
 ```sh
-pipenv install streamlit
+pipenv install
+```
+
+or
+
+```sh
+pipenv install --skip-lock streamlit spacy textblob gensim sklearn numpy matplotlib
+pipenv run spacy download en_core_web_sm
+pipenv lock
+```
+
+then
+
+```sh
 pipenv run streamlit run app.py
 ```
 
