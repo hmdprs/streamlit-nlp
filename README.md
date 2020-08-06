@@ -1,12 +1,18 @@
 # Streamlit Sample
 *Simple Streamlit App + Deployment on Heroku*
 
+## Local Run
+
+```sh
+pipenv install streamlit
+pipenv run streamlit run app.py
+```
+
 ## Deployment Required Files
 
 ### requirements.txt
 
 ```sh
-pipenv install streamlit
 pipenv run pip freeze > requirements.txt
 ```
 
