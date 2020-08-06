@@ -1,5 +1,6 @@
 import streamlit as st
-import spacy
+# import spacy
+import en_core_web_sm
 from textblob import TextBlob
 from gensim.summarization import summarize
 
@@ -7,8 +8,8 @@ from gensim.summarization import summarize
 # tokenizer and lemmatizer
 def text_analyzer(my_text):
     # https://spacy.io/usage/models#models-download
-    # python -m spacy download en_core_web_sm
-    nlp = spacy.load("en_core_web_sm")
+    # nlp = spacy.load("en_core_web_sm")
+    nlp = en_core_web_sm.load()  # for Heroku deployment
     docs = nlp(my_text)
     tokens = [f"Token: {token.text}, Lemma: {token.lemma_}" for token in docs]
     return tokens
@@ -16,11 +17,10 @@ def text_analyzer(my_text):
 
 # extract names
 def entity_analyzer(my_text):
-    nlp = spacy.load("en_core_web_sm")
+    # nlp = spacy.load("en_core_web_sm")
+    nlp = en_core_web_sm.load()  # for Heroku deployment
     docs = nlp(my_text)
-    entities = [
-        f"Entity: {entity.text}, Label: {entity.label_}" for entity in docs.ents
-    ]
+    entities = [f"Entity: {entity.text}, Label: {entity.label_}" for entity in docs.ents]
     return entities
 
 
