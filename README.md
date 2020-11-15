@@ -1,4 +1,4 @@
-# Streamlit Sample
+# streamlit-nlp
 *Simple Streamlit App + Deployment on Heroku*
 
 ## Local Run
